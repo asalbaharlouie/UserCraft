@@ -1,0 +1,8 @@
+services:
+  usercraft:
+    build: .
+    image: <your-dockerhub-username>/usercraft:latest
+    container_name: usercraft
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
