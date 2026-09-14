@@ -1,5 +1,10 @@
 # UserCraft — CRUD REST API
 
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?style=for-the-badge&logo=python)
+![Flask](https://img.shields.io/badge/Flask-v3.0.0-black.svg?style=for-the-badge&logo=flask)
+![uv](https://img.shields.io/badge/uv-Package%20Manager-blueviolet.svg?style=for-the-badge)
+![License MIT](https://img.shields.io/badge/License-MIT-orange.svg?style=for-the-badge)
+
 A simple RESTful API built with **Flask** that implements full **CRUD** (Create, Read, Update, Delete) operations for managing user records, following REST conventions and proper HTTP status codes.
 
 ## Features
