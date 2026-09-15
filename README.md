@@ -118,7 +118,7 @@ POST /
 {
     "name": "navid",
     "family": "sadeghi",
-    "email": "navidsadeghi0021@gmail.com",
+    "email": "ns@gmail.com",
     "password": "12345678"
 }
 ```
@@ -129,7 +129,7 @@ POST /
     "id": 1,
     "name": "navid",
     "family": "sadeghi",
-    "email": "navidsadeghi0021@gmail.com"
+    "email": "ns@gmail.com"
 }
 ```
 
@@ -159,7 +159,7 @@ GET /2
     "id": 2,
     "name": "navid",
     "family": "sadeghi",
-    "email": "navidsadeghi0021@gmail.com"
+    "email": "ns@gmail.com"
 }
 ```
 
@@ -205,7 +205,7 @@ Supports **partial updates** — only the fields included in the request body wi
     "id": 2,
     "name": "reza",
     "family": "sadeghi",
-    "email": "navidsadeghi0021@gmail.com"
+    "email": "ns@gmail.com"
 }
 ```
 
