@@ -1,3 +1,5 @@
+import pytest
+
 def test_creat_user_success(client):
     payload = {
         "name": "navid",
@@ -6,7 +8,7 @@ def test_creat_user_success(client):
         "password": "12345678"
     }
 
-    response = client.pos("/users", json=payload)
+    response = client.post("/users", json=payload)
 
     assert response.status_code == 200
     body = response.get_json()
@@ -30,19 +32,19 @@ def test_creat_user_increments_id(client):
     "missing_field",
     ["name", "family", "email", "password"]
 )
-def test_creat_user_missing_field_return_400(client, misisng_field):
+def test_creat_user_missing_field_return_400(client, missing_field):
     payload = {
             "name": "navid",
             "family": "sadeghi",
             "email": "navidsadeghi0021@gmail.com",
             "password": "12345678"
     }
-    del payload[misisng_field]
+    del payload[missing_field]
 
-    response = client.post("/users, json={}")
+    response = client.post("/users", json=payload)
 
     assert response.status_code == 400
-    assert response.get_json() == {"response"; "bad request"}
+    assert response.get_json() == {"response": "bad request"}
 
 def test_user_empty_body_returns_400(client):
     response = client.post("/users", json={})

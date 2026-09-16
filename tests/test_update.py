@@ -1,6 +1,6 @@
 def test_update_user_partial_name_only(client):
     created = client.post(
-        "/users"
+        "/users",
         json={"name": "navid", "family": "sadeghi", "email": "n@s.com", "password": "x"}
     ).get_json()
 
@@ -17,7 +17,7 @@ def test_update_user_multiple_fields(client):
     created = client.post(
      "/users",
      json={"name": "navid", "family": "baharlouie", "email": "baharlouie@gmail.com", "password": "x"}   
-    ).get.json()
+    ).get_json()
 
     response = client.put("/users", json={"id": created["id"], "family": "baharlouie", "email": "baharlouie@gmail.com"})
 
