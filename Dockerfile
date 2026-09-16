@@ -18,5 +18,4 @@ ENV PATH="/app/.venv/bin:$PATH"
 
 EXPOSE 8000
 
-# Run the app through uv so it uses the correct virtual environment
-CMD ["uv", "run", "crud.py"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "crud:app"]
