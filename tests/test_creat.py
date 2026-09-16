@@ -17,7 +17,7 @@ def test_creat_user_success(client):
     assert "password" not in body
 
 
-def test_creat_user_increments_id(client);
+def test_creat_user_increments_id(client):
     payload = {"name": "a", "family": "b", "email": "a@b.com", "password": "x"}
 
     first = client.post("/users", json=payload).get_json()

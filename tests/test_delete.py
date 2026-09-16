@@ -1,6 +1,6 @@
 def test_delete_existing_user(client):
     created = client.post(
-        "/users"
+        "/users",
         json={"name": "navid", "family": "sadeghi", "email": "n@s.com", "password": "x"}
     ).get_json()
 
