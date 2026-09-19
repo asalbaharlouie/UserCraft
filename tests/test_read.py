@@ -2,7 +2,7 @@ def test_get_existing_user(client):
     payload = {
             "name": "navid",
             "family": "sadeghi",
-            "email": "navidsadeghi0021@gmail.com",
+            "email": "n@s.com",
             "password": "912345678"
         }
     created = client.post("/users", json=payload). get_json()

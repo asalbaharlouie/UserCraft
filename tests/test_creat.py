@@ -4,7 +4,7 @@ def test_creat_user_success(client):
     payload = {
         "name": "navid",
         "family": "sadeghi",
-        "email": "navidsadeghi0021@gmail.com",
+        "email": "n@s.com",
         "password": "12345678"
     }
 
@@ -15,7 +15,7 @@ def test_creat_user_success(client):
     assert body["id"] == 1
     assert body["name"] == "navid"
     assert body["family"] == "sadeghi"
-    assert body["email"] == "navidsadeghi0021@gmail.com"
+    assert body["email"] == "n@s.com"
     assert "password" not in body
 
 
@@ -36,7 +36,7 @@ def test_creat_user_missing_field_return_400(client, missing_field):
     payload = {
             "name": "navid",
             "family": "sadeghi",
-            "email": "navidsadeghi0021@gmail.com",
+            "email": "n@sgmail.com",
             "password": "12345678"
     }
     del payload[missing_field]
